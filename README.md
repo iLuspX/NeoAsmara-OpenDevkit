@@ -1,4 +1,5 @@
 <p align="center"><img src="docs/assets/banner.svg" alt="ROSH: Neo Asmara" width="100%"></p>
+
 # KarosDevTool — NeoAsmara DevToolKit
 
 Native Windows editing tools for ROSH : Neo Asmara. The main application is C++20 with a Direct3D 9 viewport. It does not need a browser, a local HTTP server, Python or a source checkout for its native functions.
@@ -7,13 +8,15 @@ Native Windows editing tools for ROSH : Neo Asmara. The main application is C++2
 
 ## Start
 
-1. Open `KarosDevTool.exe`.
+[![Download DevToolKit](docs/assets/download.svg)](https://pixeldrain.com/u/w3MSZU5g)
+
+1. Download and extract the complete toolkit, then open `KarosDevTool.exe`.
 2. Select the intended Core installation if prompted. Choose the folder containing `Config/server.json`.
 3. Pick a map in **World Editor**. Search for a spawn, inspect its coordinates and edit a draft.
 
 The public package defaults to the adjacent `NeoAsmara Core++` folder. If it was moved or renamed, the editor searches nearby Core installations and offers a folder picker when needed. It saves the chosen locations in `Editor.settings.json`.
 
-Keep `KarosDevTool.exe`, `DevContent.exe`, `libc++.dll`, `libunwind.dll` and `Assets` together. Use a writable folder. The full public package carries its extracted map resources under `Assets/ResUnpak`; it does not require the developer's client folder. `ResourceRoot` can point to another existing extraction instead of duplicating it.
+Keep `KarosDevTool.exe`, `DevContent.exe`, `NetworkPublisher.exe`, `libc++.dll`, `libunwind.dll` and `Assets` together. Use a writable folder. The full public package carries its extracted map resources under `Assets/ResUnpak`; it does not require the developer's client folder. `ResourceRoot` can point to another existing extraction instead of duplicating it.
 
 ## Native tools
 
@@ -23,6 +26,7 @@ Keep `KarosDevTool.exe`, `DevContent.exe`, `libc++.dll`, `libunwind.dll` and `As
 | Cash Shop | Product groups with purchase options, price editing, product renaming, addition/removal, category/subcategory creation, renaming, deletion with reassignment and product assignment |
 | Gacha | Five native machines, add/remove prizes, edit quantity, weight and grade; up to 1,000 prizes per pool |
 | Drop Policy | Edit the supported global drop-distance settings |
+| Network | Server/client IPv4 loopback and port editing, baseline validation, signed publication and interrupted-update recovery |
 | Scene Editor | Select existing scenery, inspect a supported textured model, orbit/zoom, wireframe, texture toggle, position/rotation/scale, duplicate/delete, Undo/Redo and editor-scene save/open |
 
 ![Scene Editor with an actual Berneo model](docs/assets/scene-editor.png)
@@ -37,11 +41,32 @@ These scenes are **editor-only**. They are not Karos client scene files and are 
 
 ## Cash Shop and Gacha
 
+![Native catalog editor](docs/assets/catalog-editor.png)
+
 Cash products expose their existing duration/item variants through **Purchase option**. Categories can contain subcategories. Removing a category requires a valid destination for its products; removing a product stops its sale without deleting owned items or purchase history. Double-click a product to rename it.
 
 Gacha prize rows are editable and can be added or removed. A pool must retain at least one valid prize. The five-machine protocol and 1,000-prize bound are retained. Buff-preset authoring, buying-time buff choices, machine-cost editing and a normalized-chance display remain pending; this build does not claim to implement them.
 
 Catalog names come from the selected Core. Custom product names and localized game data are preserved; the native interface itself uses English by default.
+
+## Network settings
+
+Open **Network** in the native sidebar. This module does not launch the old HTML application.
+
+1. Check the selected Core and choose its matching client folder.
+2. Set the server/client IPv4 loopback address and the game, world-hint, account API and GM API ports.
+3. Choose the release owner's RSA XML private signing key. Its public key must match the key already trusted by the selected launcher. Private signing keys are not supplied with the public toolkit.
+4. Use **Validate changes**. Validation checks the signed baseline without changing the installation.
+5. Close that installation's game, launcher and server services. Use **Apply signed update** and review its confirmation.
+6. Restart the Core and reopen the launcher.
+
+Application updates the Core configuration, client repair-source path, launcher profile, native `ServerList.ten`, protected-file hashes and signed update manifest together. Approvals for unchanged files remain unchanged. It refuses a mismatched key, altered baseline, invalid address/port or redirected installation path. The current preview preserves its local IPv4 scope; internet hosting is not enabled by this editor.
+
+The publisher keeps one small metadata rollback record and supports **Recover interrupted update**. Recovery refuses to overwrite a newer manual edit. Publishing an endpoint change creates only the small changed repair blobs; it never copies the whole client into the Core.
+
+The native interface and content editor run without a browser or Python. This signing module uses the included `NetworkPublisher.exe` and .NET Framework 4.8.
+
+![Native network settings](docs/assets/network-settings.png)
 
 ## Prepare and apply a patch
 
@@ -61,6 +86,7 @@ Scene workspace files are not server-content patches. Changing game-client resou
 - Included LLVM runtime DLLs and Windows GDI+/CNG/DPAPI/SQLite components.
 - An initialized compatible NeoAsmara Core and the included supported visual resources.
 - No Qt, browser, Python, SQL Server or compiler required to run the native edition.
+- .NET Framework 4.8 for the included signed network publisher.
 
 ## Validation and limits
 
