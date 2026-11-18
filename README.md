@@ -74,7 +74,7 @@ The separate legacy HTML toolset is retained in the local development installati
 
 ---
 
-[Support development on Ko-fi](https://ko-fi.com/neoasmara) — optional donations.
+[![Support on Ko-fi](docs/assets/kofi.svg)](https://ko-fi.com/neoasmara)
 
 ## License
 
