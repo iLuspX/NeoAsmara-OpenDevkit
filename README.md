@@ -37,7 +37,7 @@ These scenes are **editor-only**. They are not Karos client scene files and are 
 
 ## Cash Shop and Gacha
 
-![Native catalog editor](docs/assets/catalog-editor.png)
+[![Support on Ko-fi](docs/assets/kofi.svg)](https://ko-fi.com/neoasmara)
 
 Cash products expose their existing duration/item variants through **Purchase option**. Categories can contain subcategories. Removing a category requires a valid destination for its products; removing a product stops its sale without deleting owned items or purchase history. Double-click a product to rename it.
 
