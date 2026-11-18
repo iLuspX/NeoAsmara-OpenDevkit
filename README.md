@@ -37,8 +37,6 @@ These scenes are **editor-only**. They are not Karos client scene files and are 
 
 ## Cash Shop and Gacha
 
-[![Support on Ko-fi](docs/assets/kofi.svg)](https://ko-fi.com/neoasmara)
-
 Cash products expose their existing duration/item variants through **Purchase option**. Categories can contain subcategories. Removing a category requires a valid destination for its products; removing a product stops its sale without deleting owned items or purchase history. Double-click a product to rename it.
 
 Gacha prize rows are editable and can be added or removed. A pool must retain at least one valid prize. The five-machine protocol and 1,000-prize bound are retained. Buff-preset authoring, buying-time buff choices, machine-cost editing and a normalized-chance display remain pending; this build does not claim to implement them.
