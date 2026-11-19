@@ -1,5 +1,5 @@
 # NeoAsmara Project License (NAPL)
-**Version 1.0 — November 18, 2026**
+**Version 1.1 — November 19, 2026**
 
 Copyright © 2026 LuspX_
 
@@ -38,7 +38,7 @@ c. Examine software behavior, interfaces, data structures, and supported protoco
 
 d. Analyze and reverse engineer officially distributed NeoAsmara binaries, including through disassembly, decompilation, debugging, and memory inspection.
 
-e. Modify authorized copies for private experimentation and testing.
+e. Modify authorized copies for experimentation, development, redistribution, and commercial operation, subject to Sections 6 and 7.
 
 f. Create independent implementations based on technical knowledge lawfully obtained through research.
 
@@ -48,11 +48,9 @@ These permissions do not require the copyright owner to disclose unpublished sou
 
 ## 4. Source Code
 
-Publication of source code does not automatically grant unrestricted redistribution or commercial exploitation rights.
+Source code released under this License may be inspected, compiled, modified, and redistributed, including in compiled form, subject to Sections 6 and 7.
 
-Where original NeoAsmara source code is publicly provided under this License, recipients may inspect, compile, and privately modify it for research and local testing.
-
-Public distribution of modified source code, substantial protected portions of the original code, or compiled derivatives requires separate written authorization from the copyright owner.
+Any distributed modifications to the source code must remain publicly available under this same License (NAPL v1.1). Original copyright notices, attribution headers, and permanent project credits must be preserved.
 
 Separately written implementations that do not incorporate protected NeoAsmara code remain the property of their authors, subject to applicable law.
 
@@ -67,36 +65,18 @@ Permitted techniques include:
 - Debugging and execution tracing
 - Protocol and file-format analysis
 - Memory inspection and runtime analysis
-- Private binary modifications
+- Binary modifications, subject to Sections 6 and 7
 - Interoperability research
 
 These permissions concern NeoAsmara software and do not authorize unauthorized access to external services, accounts, or third-party systems.
 
 ## 6. Redistribution and Commercial Use
 
-Without separate written permission from the copyright owner, users may not:
+Recipients may redistribute, modify, and commercially operate NeoAsmara software, provided that: (a) any public or commercial server visibly displays the suffix ": NeoAsmara" in its official server title, launcher, and primary public listings (e.g., "[Server Name]: NeoAsmara"); (b) any distributed modifications to the source code remain publicly available under this same License (NAPL v1.1); and (c) the operator assumes sole responsibility for compliance regarding third-party trademarks, clients, and game assets.
 
-a. Redistribute original or modified NeoAsmara software outside functionality expressly permitted by the hosting platform.
+## 7. Project Credits and Permanent Attribution
 
-b. Sell, rent, sublicense, or commercially distribute protected NeoAsmara software.
-
-c. Operate the released experimental Core as a publicly accessible production game service.
-
-d. Present unofficial distributions as official NeoAsmara releases.
-
-Independent software that does not incorporate protected NeoAsmara material is not subject to these distribution restrictions.
-
-Commercial licenses or additional permissions may be negotiated separately.
-
-## 7. Project Credits and Identity
-
-Copyright notices and applicable attribution notices must be preserved.
-
-The NeoAsmara name and project branding may be used descriptively but must not be used to falsely imply official affiliation, endorsement, or authorization.
-
-Project contributors retain their respective rights unless otherwise agreed in writing.
-
-Contributions accepted into the Project must have an appropriate and documented licensing basis.
+Original copyright notices and attribution headers must be preserved. Any contributor whose code changes are merged into the official NeoAsmara repository shall receive permanent attribution in the project credits (CONTRIBUTORS.md), which may not be removed in derivative works. By submitting a contribution, the author grants LuspX_ a perpetual, worldwide, royalty-free license to use, modify, and redistribute the contribution under the NeoAsmara Project.
 
 ## 8. Third-Party Intellectual Property
 
@@ -114,7 +94,7 @@ NeoAsmara is under active development.
 
 Some features may be incomplete, unstable, partially implemented, or incompatible with particular software versions.
 
-Unless expressly stated otherwise in a specific release, the Software is intended for local testing and research.
+Public and commercial operation is permitted under Section 6. Experimental status does not certify production readiness; operators are responsible for validating their deployments.
 
 The existence of a feature in a user interface does not guarantee that the associated server-side implementation is complete.
 
@@ -162,7 +142,7 @@ Copyright © 2026 LuspX_
 
 Project identity: NeoAsmara
 
-License: NeoAsmara Project License v1.0
+License: NeoAsmara Project License v1.1
 
 Independent MMORPG Emulator Development and Research
 
